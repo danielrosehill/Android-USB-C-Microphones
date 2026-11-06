@@ -12,7 +12,7 @@ that is what this records.
 | Date | Phone | Mic | Connection | Recognised | Observed | Drops that reconnected within 2 s | Stability |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-11-06 | OnePlus Nord 3, Android 16 | Jabra Evolve 30 II (`0b0e:0314`) | Adapter: USB-C to USB-A female | Yes | 89 min | 12 | Flaky from the start |
-| 2026-11-06 | OnePlus Nord 3, Android 16 | Yealink BH70 (`6993:b21a`) | Direct: Baseus USB-C cable | Yes | 16.5 min | 0 | Stable, confirmed by the tester |
+| 2026-11-06 | OnePlus Nord 3, Android 16 | Yealink BH70 (`6993:b21a`) | Direct: Baseus USB-C cable | Yes | 32 min | 0 | Stable, confirmed by the tester |
 
 The Jabra's connections had a median length of 30.5 seconds and the shortest lasted 8 seconds. Two long
 ones lasted 24 and 34 minutes. It worked as a mic between drops. The test does not show whether the
