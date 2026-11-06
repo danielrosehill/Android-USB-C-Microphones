@@ -7,11 +7,31 @@ USB mics need no special app permission on Android. Android's own USB audio supp
 inputs, so any app with microphone access can use them. Whether the link stays up is another matter, and
 that is what this records.
 
+## Why this exists
+
+The question behind this repository was simple: will a USB-A headset plugged into a USB-C phone through an
+adapter work the same as a headset with a USB-C plug?
+
+On paper, yes. In practice, it can make a difference. In the first test here, a USB-A headset on a cheap
+adapter kept dropping from the start, while a headset connected directly over a USB-C cable held for 32
+minutes without a drop.
+
+Looking for a reliable USB-C connection to a phone turned up very little data on connection stability. Spec
+sheets say whether a mic is compatible, not whether it stays connected. That is why this dataset keeps the
+technical logs, connection by connection.
+
+**Practical advice:** if you want a USB mic on a phone, buy one terminated in USB-C. You can still use a
+USB-C to USB-A adapter to connect it to a computer. That may be more reliable, but it hasn't been tested here.
+
+**What this does and doesn't show:** the adapter failed in this setup, and it was a cheap generic one, so
+better adapters may well do fine. This is one adapter and one headset, and the two tests changed both the mic
+and the connection, so the adapter isn't proven to be the cause.
+
 ## Results
 
 | Date | Phone | Mic | Connection | Recognised | Observed | Drops that reconnected within 2 s | Stability |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2026-11-06 | OnePlus Nord 3, Android 16 | Jabra Evolve 30 II (`0b0e:0314`) | Adapter: USB-C to USB-A female | Yes | 89 min | 12 | Flaky from the start |
+| 2026-11-06 | OnePlus Nord 3, Android 16 | Jabra Evolve 30 II (`0b0e:0314`) | Adapter: generic USB-C to USB-A female, marked "10A 240W Max" | Yes | 89 min | 12 | Flaky from the start |
 | 2026-11-06 | OnePlus Nord 3, Android 16 | Yealink BH70 (`6993:b21a`) | Direct: Baseus USB-C cable | Yes | 32 min | 0 | Stable, confirmed by the tester |
 
 The Jabra's connections had a median length of 30.5 seconds and the shortest lasted 8 seconds. Two long
