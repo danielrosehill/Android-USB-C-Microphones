@@ -47,6 +47,9 @@ detail than a 16 kHz recording.
 ## Files
 
 - `data/results.csv`: one row per test. This is the dataset.
+- `data/products.csv`: a sample of products on the market, with sources, checked by `scripts/validate_products.py`.
+- `docs/products.md`: the baseline for choosing a mic, and which products pass it.
+- `docs/android-recording-apps.md`: how USB recording works on unrooted Android, and which apps can verify it.
 - `data/sessions/<test_id>.csv`: one row per USB connection in a test.
 - `scripts/usb_sessions.py`: builds a sessions file from the phone's USB log.
 
