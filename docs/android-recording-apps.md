@@ -59,7 +59,7 @@ using the USB mic: **documented** by the developer, **reported** by users, or **
 
 | App | Updated | Price | Formats | Own USB driver | Verifies the mic |
 | --- | --- | --- | --- | --- | --- |
-| [USB Microphone Recorder](https://play.google.com/store/apps/details?id=com.majinsoft.usbmicrophonerecorder) | Jun 2026 | $7.99 | Up to 192 kHz, 16-bit or 32-bit float, WAV, RAW, AAC | Not stated | Documented, and the mic's name is saved in WAV files |
+| [USB Microphone Recorder](https://play.google.com/store/apps/details?id=com.majinsoft.usbmicrophonerecorder) (no independent reports) | Jun 2026 | $7.99 | Up to 192 kHz, 16-bit or 32-bit float, WAV, RAW, AAC | Not stated | Documented, and the mic's name is saved in WAV files |
 | [USB Audio Recorder PRO](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudiorecorderpro) | Oct 2026 | $5.99 | Up to 384 kHz, 16 to 32-bit, WAV, FLAC, OGG, AIFF | Yes | Documented for USB use, but not how it shows the device |
 | [Audio Evolution Mobile](https://play.google.com/store/apps/details?id=com.extreamsd.aemobile) | Nov 2026 | $11.99, driver extra | Whatever the device supports | Yes, as a paid add-on | Driver documented, verification not found |
 | [RØDE Reporter](https://play.google.com/store/apps/details?id=com.rode.reporter) | Aug 2026 | Free | Up to 48 kHz, 24-bit, WAV, MP3 | Not found | Documented connection indicator, RØDE mics only |
@@ -73,11 +73,41 @@ adds its own effects, so it isn't raw capture. Auphonic's app was last updated i
 
 ## Where to start
 
-1. **USB Microphone Recorder:** the only app whose manual says it lists the mic in use, saves its name in the
-   file and offers only what the mic supports. It's from a small developer.
-2. **USB Audio Recorder PRO:** its own driver offers the most direct control of format, but only that app can use
-   the mic.
-3. **RØDE Reporter:** the first-party choice if you have a RØDE USB-C mic.
+**Buy USB Audio Recorder PRO** ($5.99, [Google Play](https://play.google.com/store/apps/details?id=com.extreamsd.usbaudiorecorderpro)).
+This replaces an earlier ranking made from store pages and manuals alone, which put USB Microphone Recorder first.
+Checked against user reports on 2026-11-06, it has by far the longest record of working:
+
+- **Rating:** 3.9 from about 1,000 Play reviews and 50,000+ installs, updated October 2026.
+- **USB mics:** one Play reviewer calls it "the only app I've been able to use the Samson Q2U USB microphone with".
+  [ProVideo Coalition](https://www.provideocoalition.com/review-usb-audio-recorder-pro-app-for-android/) got 48 kHz, 24-bit mono
+  from a USB mic on a OnePlus One in 2015.
+- **Recent devices:** a [TalkBass](https://www.talkbass.com/threads/anyone-use-an-android-tablet-for-multitrack-recording.1692378/)
+  user runs it on a OnePlus Pad 2 Pro. On [Pixel 6a and 7 phones with Android 14](https://www.elektronauts.com/t/newer-pixel-phones-tested-with-6a-7-android-14-dont-connect-to-dt-dn-st-with-usb-audio/210176),
+  it worked with a USB device that system audio could not use.
+- **Control:** its own driver offers the device's rates and depths, plus any gain controls the device exposes.
+- **No silent fallback (inferred):** it talks to the USB device directly, so it shouldn't be able to record from the phone's mic by mistake.
+
+Limits:
+
+- Only that app can use the mic while it's in use.
+- Connect the mic before opening the app.
+- [The developer](https://www.extreamsd.com/index.php/technology/usb-audio-driver) advises keeping it in the foreground for reliable recording. One reviewer reports recording with the screen off.
+- One reviewer couldn't get mono from a mono mic.
+- It doesn't save the mic's name in the file.
+- Older reviews outnumber recent ones. No report covers Android 16.
+
+**Alternatives:**
+
+- **USB Microphone Recorder:** the only app that documents saving the mic's name in the file. At the time of checking it had 100+ installs, no rating and no independent reports, so it's a gamble. Its developer also notes that Android 14 to 16 could briefly reclaim the mic and stop a WAV recording, which it says it has fixed.
+- **Audio Evolution Mobile:** the same driver in a full multitrack studio. USB Audio Recorder PRO also acts as its USB licence.
+- **RØDE Reporter:** the first-party choice for a RØDE USB-C mic.
+
+**F-Droid:** nothing suitable. [Fossify Voice Recorder](https://f-droid.org/en/packages/org.fossify.voicerecorder/) and
+[Audio Recorder](https://f-droid.org/en/packages/com.dimowner.audiorecorder/) don't document USB input selection, and
+[a USB request for the latter](https://github.com/Dimowner/AudioRecorder/issues/34) has been open since 2020.
+[FRecorder](https://github.com/vdo/FRecorder) claims USB input and 24-bit WAV, but it isn't on F-Droid and has no field reports.
+
+**Evidence gap:** Reddit, XDA and Gearspace couldn't be read directly, so this rests on Play reviews, specialist forums and reviews.
 
 Whichever you use, check one take yourself. Read the rate and bit depth from the file, confirm the mic's name,
 and look at a spectrogram to see how far up the audio really goes.
